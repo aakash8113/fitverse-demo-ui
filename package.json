@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
   "dev": "vite",
-  "prebuild": "tsc -b",  // Run TypeScript compilation first
-  "build": "vite build", // Now just run Vite build
+  "prebuild": "tsc -b",
+  "build": "vite build",
   "lint": "eslint .",
   "preview": "vite preview"
 },
