@@ -24,8 +24,10 @@ const Logo = styled(Link)`
 `;
 
 const LogoImage = styled.img`
-  height: 2.2rem;
-  width: 2.2rem;
+  height: 2.8rem;
+  width: 2.8rem;
+  position: relative;
+  top: -6px;
   object-fit: contain;
   display: block;
 `;
@@ -51,7 +53,7 @@ const SearchBar = styled.div`
     color: #666;
     cursor: pointer;
     transition: color 0.2s ease;
-    
+
     &:hover {
       color: black;
     }
@@ -84,12 +86,16 @@ const IconsContainer = styled.div`
   }
 `;
 
+const LogoText = styled.span`
+  font-family: 'Mokoto', sans-serif; /* Apply Mokoto font here */
+`;
+
 const Header = () => {
   return (
     <HeaderContainer>
       <Logo to="/">
         <LogoImage src={logoImg} alt="Fitverse Logo" />
-        <span>FITVERSE</span>
+        <LogoText>FITVERSE</LogoText>
       </Logo>
       <SearchBar>
         <input type="text" placeholder="Search" />
