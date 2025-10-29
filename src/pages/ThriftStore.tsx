@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { useState } from 'react';
-import { BsHeart, BsHeartFill, BsUpload, BsImages } from 'react-icons/bs';
-import { AiOutlineTag } from 'react-icons/ai';
+import { BsHeart, BsHeartFill, BsImages } from 'react-icons/bs';
 import { MdLocalOffer } from 'react-icons/md';
 import { FaRupeeSign } from 'react-icons/fa';
 import { convertToRupees, formatPrice } from '../utils/currency';
