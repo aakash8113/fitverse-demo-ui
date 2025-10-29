@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { BsHeart, BsHeartFill, BsStarFill, BsStarHalf } from 'react-icons/bs';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { convertToRupees, formatPrice } from '../utils/currency';
