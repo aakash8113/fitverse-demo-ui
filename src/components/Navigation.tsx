@@ -55,6 +55,12 @@ const SubNav = styled.nav`
 const Navigation = () => {
   const location = useLocation();
 
+  // Show SubNav on home (/), shop, and thrift — but not on /ai
+  const showSubNav =
+    location.pathname === '/' ||
+    location.pathname.startsWith('/shop') ||
+    location.pathname.startsWith('/thrift');
+
   return (
     <NavContainer>
       <MainNav>
@@ -68,20 +74,23 @@ const Navigation = () => {
           THRIFT STORE
         </Link>
       </MainNav>
-      <SubNav>
-        <Link to="/shop/all" className={location.pathname.includes('/all') ? 'active' : ''}>
-          All
-        </Link>
-        <Link to="/shop/men" className={location.pathname.includes('/men') ? 'active' : ''}>
-          MEN
-        </Link>
-        <Link to="/shop/women" className={location.pathname.includes('/women') ? 'active' : ''}>
-          WOMEN
-        </Link>
-        <Link to="/shop/kids" className={location.pathname.includes('/kids') ? 'active' : ''}>
-          KIDS
-        </Link>
-      </SubNav>
+
+      {showSubNav && (
+        <SubNav>
+          <Link to="/shop/all" className={location.pathname.includes('/all') ? 'active' : ''}>
+            All
+          </Link>
+          <Link to="/shop/men" className={location.pathname.includes('/men') ? 'active' : ''}>
+            MEN
+          </Link>
+          <Link to="/shop/women" className={location.pathname.includes('/women') ? 'active' : ''}>
+            WOMEN
+          </Link>
+          <Link to="/shop/kids" className={location.pathname.includes('/kids') ? 'active' : ''}>
+            KIDS
+          </Link>
+        </SubNav>
+      )}
     </NavContainer>
   );
 };
