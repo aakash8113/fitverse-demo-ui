@@ -46,6 +46,11 @@ const AIContainer = styled(motion.div)`
 `;
 
 const PreviewSection = styled(motion.div)`
+display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 78vh;
+  width: 35vw;
   border-radius: 20px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.8);
@@ -66,9 +71,7 @@ const PreviewSection = styled(motion.div)`
 `;
 
 const ResultWindow = styled(motion.div)`
-  aspect-ratio: 3/4;
   background: rgba(255, 255, 255, 0.9);
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,12 +89,12 @@ const ResultWindow = styled(motion.div)`
       linear-gradient(rgba(130, 130, 130, 0.1) 1px, transparent 1px),
       linear-gradient(90deg, rgba(130, 130, 130, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
-    opacity: 0.5;
+    opacity: 1;
   }
 
   img {
-    max-width: 100%;
-    max-height: 100%;
+    height: 95%;
+    width: 95%;
     object-fit: contain;
     z-index: 1;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
@@ -148,12 +151,14 @@ const ResultWindow = styled(motion.div)`
 
 const ControlsSection = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 1.5rem;
 `;
 
 const SelectionBox = styled(motion.div)`
   background: rgba(255, 255, 255, 0.9);
+  height: 70vh;
+  width: 26vw;
   border-radius: 16px;
   box-shadow: 
     0 4px 24px -1px rgba(0, 0, 0, 0.1),
@@ -187,6 +192,7 @@ const SelectionContent = styled.div`
 `;
 
 const UploadArea = styled.div<{ hasImage?: boolean }>`
+  min-height: 200px;
   padding: 1.5rem;
   text-align: center;
   cursor: pointer;
@@ -238,6 +244,9 @@ const UploadArea = styled.div<{ hasImage?: boolean }>`
 
 const GenerateButton = styled(motion.button)`
   background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+  position: relative;
+  left: 300px;
+  bottom: 24px;
   color: white;
   border: none;
   padding: 1.2rem;
